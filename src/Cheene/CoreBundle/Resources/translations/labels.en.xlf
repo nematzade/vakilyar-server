@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>label.auth.username</source>
+                <target state="translated">Username</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>label.auth.password</source>
+                <target state="translated">Password</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>label.auth.forget_password</source>
+                <target state="translated">Password Recovery</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>label.auth.forget_password.desc</source>
+                <target state="translated">Click %link% To Reset your password</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>label.here</source>
+                <target state="translated">Here</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>label.locale.fa</source>
+                <target state="translated">فارسی</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>label.locale.en</source>
+                <target state="translated">English</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>label.auth.my_profile</source>
+                <target state="translated">My Profile</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>label.auth.logout</source>
+                <target state="translated">Logout</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>label.profile.my_calendar</source>
+                <target state="translated">My Calendar</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>label.profile.my_messages</source>
+                <target state="translated">My Messages</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>label.profile.my_tasks</source>
+                <target state="translated">My Tasks</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>label.notification.unseen</source>
+                <target state="translated">Unseen Notifications</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>label.notification.view_all</source>
+                <target state="translated">View All</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>label.message.unread</source>
+                <target state="translated">Unread Messages</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>label.message.view_all</source>
+                <target state="translated">View All</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>label.dashboard</source>
+                <target state="translated">Dashboard</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>label.office.automation</source>
+                <target state="translated">Office Automation</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>label.office.letters</source>
+                <target state="translated">Letters</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>label.office.letters.archived</source>
+                <target state="translated">Archived Letters</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>label.office.workflows</source>
+                <target state="translated">Workflows</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>label.office.workflows.tracking</source>
+                <target state="translated">Tracking Workflows</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>label.warehouse.management</source>
+                <target state="translated">Warehouse Management</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>label.warehouse.new_item</source>
+                <target state="translated">New Item</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>label.warehouse.list</source>
+                <target state="translated">List Of Warehouse Items</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>label.assets.management</source>
+                <target state="translated">Assets Management</target>
+            </trans-unit>
+            <trans-unit id="27">
+                <source>label.assets.new_item</source>
+                <target state="translated">New Asset</target>
+            </trans-unit>
+            <trans-unit id="28">
+                <source>label.assets.list</source>
+                <target state="translated">List of Assets</target>
+            </trans-unit>
+            <trans-unit id="29">
+                <source>label.crm</source>
+                <target state="translated">CRM</target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>label.crm.contracts</source>
+                <target state="translated">Contracts</target>
+            </trans-unit>
+            <trans-unit id="31">
+                <source>label.hr</source>
+                <target state="translated">Human Resources</target>
+            </trans-unit>
+            <trans-unit id="32">
+                <source>label.hr.employees</source>
+                <target state="translated">Employees</target>
+            </trans-unit>
+            <trans-unit id="33">
+                <source>label.users.management</source>
+                <target state="translated">Users Management</target>
+            </trans-unit>
+            <trans-unit id="34">
+                <source>label.users.new_user_creation</source>
+                <target state="translated">New User</target>
+            </trans-unit>
+            <trans-unit id="35">
+                <source>label.users.list</source>
+                <target state="translated">List of Users</target>
+            </trans-unit>
+            <trans-unit id="36">
+                <source>label.system.settings</source>
+                <target state="translated">Settings</target>
+            </trans-unit>
+            <trans-unit id="37">
+                <source>label.system.configurations</source>
+                <target state="translated">Software Configurations</target>
+            </trans-unit>
+            <trans-unit id="38">
+                <source>label.system.logs</source>
+                <target state="translated">Software Logs</target>
+            </trans-unit>
+            <trans-unit id="39">
+                <source>label.system.analytics</source>
+                <target state="translated">Software Analytics</target>
+            </trans-unit>
+            <trans-unit id="40">
+                <source>label.system.info</source>
+                <target state="translated">Software Information</target>
+            </trans-unit>
+            <trans-unit id="41">
+                <source>label.search.messages</source>
+                <target state="translated">Search Messages...</target>
+            </trans-unit>
+            <trans-unit id="42">
+                <source>label.roles.management</source>
+                <target state="translated">Roles Management</target>
+            </trans-unit>
+            <trans-unit id="43">
+                <source>label.users.actiongroup_management</source>
+                <target state="translated">Action Groups Management</target>
+            </trans-unit>
+
+            <trans-unit id="44">
+                <source>label.submit</source>
+                <target state="translated">Submit</target>
+            </trans-unit>
+            <trans-unit id="45">
+                <source>label.basic_data</source>
+                <target state="translated">Personal Info</target>
+            </trans-unit>
+            <trans-unit id="46">
+                <source>label.basic_data.desc</source>
+                <target state="translated">Basic Information</target>
+            </trans-unit>
+            <trans-unit id="47">
+                <source>label.users.username</source>
+                <target state="translated">Username</target>
+            </trans-unit>
+            <trans-unit id="48">
+                <source>label.users.firstname</source>
+                <target state="translated">First Name</target>
+            </trans-unit>
+            <trans-unit id="49">
+                <source>label.users.lastname</source>
+                <target state="translated">Last name</target>
+            </trans-unit>
+            <trans-unit id="50">
+                <source>label.sex</source>
+                <target state="translated">Sex</target>
+            </trans-unit>
+            <trans-unit id="51">
+                <source>label.users.sex.male</source>
+                <target state="translated">Male</target>
+            </trans-unit>
+            <trans-unit id="52">
+                <source>label.users.sex.female</source>
+                <target state="translated">Female</target>
+            </trans-unit>
+            <trans-unit id="53">
+                <source>label.users.birthday</source>
+                <target state="translated">Birthday</target>
+            </trans-unit>
+            <trans-unit id="54">
+                <source>label.comment</source>
+                <target state="translated">Comment</target>
+            </trans-unit>
+            <trans-unit id="55">
+                <source>label.contact_data</source>
+                <target state="translated">Contact Details</target>
+            </trans-unit>
+            <trans-unit id="56">
+                <source>label.contact_data.desc</source>
+                <target state="translated">User's Contact Details</target>
+            </trans-unit>
+            <trans-unit id="57">
+                <source>label.email</source>
+                <target state="translated">Email</target>
+            </trans-unit>
+            <trans-unit id="58">
+                <source>label.cellphone</source>
+                <target state="translated">Cellphone</target>
+            </trans-unit>
+            <trans-unit id="59">
+                <source>label.system_data</source>
+                <target state="translated">System Details</target>
+            </trans-unit>
+            <trans-unit id="60">
+                <source>label.system_data_desc</source>
+                <target state="translated">User's System Details</target>
+            </trans-unit>
+            <trans-unit id="61">
+                <source>label.users.status</source>
+                <target state="translated">Status</target>
+            </trans-unit>
+            <trans-unit id="62">
+                <source>label.users.not_verified</source>
+                <target state="translated">Not Verified</target>
+            </trans-unit>
+            <trans-unit id="63">
+                <source>label.users.not_validated</source>
+                <target state="translated">Not Validated</target>
+            </trans-unit>
+            <trans-unit id="64">
+                <source>label.users.verified</source>
+                <target state="translated">Verified</target>
+            </trans-unit>
+            <trans-unit id="65">
+                <source>label.users.active</source>
+                <target state="translated">Active</target>
+            </trans-unit>
+            <trans-unit id="66">
+                <source>label.users.deactivated</source>
+                <target state="translated">Deactivated</target>
+            </trans-unit>
+            <trans-unit id="67">
+                <source>label.users.deleted</source>
+                <target state="translated">Deleted</target>
+            </trans-unit>
+            <trans-unit id="68">
+                <source>label.users.locked</source>
+                <target state="translated">Locked</target>
+            </trans-unit>
+            <trans-unit id="69">
+                <source>label.users.expired</source>
+                <target state="translated">Expired</target>
+            </trans-unit>
+            <trans-unit id="70">
+                <source>label.locale</source>
+                <target state="translated">Locale</target>
+            </trans-unit>
+            <trans-unit id="71">
+                <source>label.global</source>
+                <target state="translated">Global</target>
+            </trans-unit>
+            <trans-unit id="72">
+                <source>label.visible</source>
+                <target state="translated">Visible</target>
+            </trans-unit>
+            <trans-unit id="73">
+                <source>label.auth.password_confirmed</source>
+                <target state="translated">Password Confirm</target>
+            </trans-unit>
+            <trans-unit id="75">
+                <source>label.users</source>
+                <target state="translated">Users</target>
+            </trans-unit>
+            <trans-unit id="76">
+                <source>label.id</source>
+                <target state="translated">Id</target>
+            </trans-unit>
+            <trans-unit id="77">
+                <source>label.users.type</source>
+                <target state="translated">Type</target>
+            </trans-unit>
+            <trans-unit id="78">
+                <source>label.created_at</source>
+                <target state="translated">Created At</target>
+            </trans-unit>
+            <trans-unit id="79">
+                <source>label.users.fullname</source>
+                <target state="translated">Full name</target>
+            </trans-unit>
+            <trans-unit id="80">
+                <source>label.users.lastseen</source>
+                <target state="translated">Last Activity</target>
+            </trans-unit>
+            <trans-unit id="81">
+                <source>label.actions</source>
+                <target state="translated">Actions</target>
+            </trans-unit>
+            <trans-unit id="82">
+                <source>label.users.edit_user</source>
+                <target state="translated">Edit User</target>
+            </trans-unit>
+            <trans-unit id="83">
+                <source>label.update</source>
+                <target state="translated">Update</target>
+            </trans-unit>
+            <trans-unit id="84">
+                <source>form.label.delete</source>
+                <target state="translated">Delete</target>
+            </trans-unit>
+            <trans-unit id="85">
+                <source>label.profile.photo</source>
+                <target state="translated">Profile Photo</target>
+            </trans-unit>
+            <trans-unit id="87">
+                <source>label.users.national_code</source>
+                <target state="translated">National Code</target>
+            </trans-unit>
+            <trans-unit id="88">
+                <source>label.type</source>
+                <target state="translated">Type</target>
+            </trans-unit>
+            <trans-unit id="89">
+                <source>label.roles</source>
+                <target state="translated">Roles</target>
+            </trans-unit>
+            <trans-unit id="90">
+                <source>label.roles.title</source>
+                <target state="translated">Role Title</target>
+            </trans-unit>
+            <trans-unit id="91">
+                <source>label.roles.role</source>
+                <target state="translated">Role</target>
+            </trans-unit>
+            <trans-unit id="92">
+                <source>label.roles.new</source>
+                <target state="translated">New Role</target>
+            </trans-unit>
+            <trans-unit id="93">
+                <source>label.roles.new_desc</source>
+                <target state="translated">Create New Roles in System</target>
+            </trans-unit>
+            <trans-unit id="94">
+                <source>label.title</source>
+                <target state="translated">Title</target>
+            </trans-unit>
+            <trans-unit id="95">
+                <source>label.action_groups</source>
+                <target state="translated">Action Groups</target>
+            </trans-unit>
+            <trans-unit id="96">
+                <source>label.action_groups.desc</source>
+                <target state="translated">Grant or Deny Access to system different sections</target>
+            </trans-unit>
+            <trans-unit id="97">
+                <source>label.roles.edit</source>
+                <target state="translated">Edit Role</target>
+            </trans-unit>
+            <trans-unit id="98">
+                <source>label.action_groups.management</source>
+                <target state="translated">Action Groups Management</target>
+            </trans-unit>
+            <trans-unit id="99">
+                <source>label.action_groups.new</source>
+                <target state="translated">New Action Group</target>
+            </trans-unit>
+            <trans-unit id="100">
+                <source>label.edit</source>
+                <target state="translated">Edit</target>
+            </trans-unit>
+            <trans-unit id="101">
+                <source>label.action_groups.code</source>
+                <target state="translated">Action Group's Code</target>
+            </trans-unit>
+            <trans-unit id="102">
+                <source>label.code</source>
+                <target state="translated">Code</target>
+            </trans-unit>
+            <trans-unit id="103">
+                <source>label.action_groups.edit</source>
+                <target state="translated">Edit Action Group</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

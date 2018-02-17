@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>button.auth.login</source>
+                <target>ورود</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>button.auth.remember_me</source>
+                <target>مرا بیاد داشته باش</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>button.edit</source>
+                <target>ویرایش</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>button.role.edit</source>
+                <target>ویرایش Roleهای کاربر</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>button.close</source>
+                <target>بستن</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>button.update</source>
+                <target>بروزرسانی</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>button.users.new</source>
+                <target>کاربر جدید</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>button.submit</source>
+                <target>ثبت تغییرات</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>button.roles.new</source>
+                <target>Role حدید</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

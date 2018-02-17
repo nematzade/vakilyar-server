@@ -1,0 +1,35 @@
+cheene_locale:
+    resource:   "@CheeneBackendBundle/Controller/LocaleController.php"
+    type:       annotation
+    prefix:     /language/{_locale}
+
+cheene_backend:
+    resource:   "@CheeneBackendBundle/Controller/DashboardController.php"
+    type:       annotation
+    prefix:     /
+
+cheene_backend_auth:
+    resource:   "@CheeneBackendBundle/Controller/AuthController.php"
+    type:       annotation
+    prefix:     /auth
+
+
+cheene_backend_action:
+    resource:   "@CheeneBackendBundle/Controller/ActionController.php"
+    type:       annotation
+    prefix:     /action
+
+cheene_backend_action_group:
+    resource:   "@CheeneBackendBundle/Controller/ActionGroupController.php"
+    type:       annotation
+    prefix:     /action-group
+
+cheene_backend_role:
+    resource:   "@CheeneBackendBundle/Controller/RoleController.php"
+    type:       annotation
+    prefix:     /role
+
+cheene_backend_user:
+    resource:   "@CheeneBackendBundle/Controller/UserController.php"
+    type:       annotation
+    prefix:     /user

@@ -1,0 +1,425 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="fa" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>label.auth.username</source>
+                <target>نام کاربری</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>label.auth.password</source>
+                <target>کلمه عبور</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>label.auth.forget_password</source>
+                <target>بازیابی رمز عبور</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>label.auth.forget_password.desc</source>
+                <target>برای بازیابی رمز خود %link% کلیک کنید</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>label.here</source>
+                <target>اینجا</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>label.locale.fa</source>
+                <target>فارسی</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>label.locale.en</source>
+                <target>English</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>label.auth.my_profile</source>
+                <target>پروفایل من</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>label.auth.logout</source>
+                <target>خروج</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>label.profile.my_calendar</source>
+                <target>تقویم من</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>label.profile.my_messages</source>
+                <target>پیام‌های من</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>label.profile.my_tasks</source>
+                <target>کارهای من</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>label.notification.unseen</source>
+                <target>دیده نشده</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>label.notification.view_all</source>
+                <target>مشاهده همه</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>label.message.unread</source>
+                <target>پیام خوانده نشده</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>label.message.view_all</source>
+                <target>مشاهده همه</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>label.dashboard</source>
+                <target>داشبورد</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>label.office.automation</source>
+                <target>اتوماسیون اداری</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>label.office.letters</source>
+                <target>نامه‌ها</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>label.office.letters.archived</source>
+                <target>نامه‌های آرشیو شده</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>label.office.workflows</source>
+                <target>گردش‌کارها</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>label.office.workflows.tracking</source>
+                <target>پیگیری گردش‌کارها</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>label.warehouse.management</source>
+                <target>مدیریت انبار</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>label.warehouse.new_item</source>
+                <target>آیتم جدید انبار</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>label.warehouse.list</source>
+                <target>لیست اموال انبار</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>label.assets.management</source>
+                <target>مدیریت اموال</target>
+            </trans-unit>
+            <trans-unit id="27">
+                <source>label.assets.new_item</source>
+                <target>آیتم جدید اموال</target>
+            </trans-unit>
+            <trans-unit id="28">
+                <source>label.assets.list</source>
+                <target>لیست اموال</target>
+            </trans-unit>
+            <trans-unit id="29">
+                <source>label.crm</source>
+                <target>ارتباط با مشتریان</target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>label.crm.contracts</source>
+                <target>قراردادها</target>
+            </trans-unit>
+            <trans-unit id="31">
+                <source>label.hr</source>
+                <target>منابع انسانی</target>
+            </trans-unit>
+            <trans-unit id="32">
+                <source>label.hr.employees</source>
+                <target>کارمندان</target>
+            </trans-unit>
+            <trans-unit id="33">
+                <source>label.users.management</source>
+                <target>مدیریت کاربران</target>
+            </trans-unit>
+            <trans-unit id="34">
+                <source>label.users.new_user_creation</source>
+                <target>ایجاد کاربر جدید</target>
+            </trans-unit>
+            <trans-unit id="35">
+                <source>label.users.list</source>
+                <target>لیست کاربران</target>
+            </trans-unit>
+            <trans-unit id="36">
+                <source>label.system.settings</source>
+                <target>تنظیمات</target>
+            </trans-unit>
+            <trans-unit id="37">
+                <source>label.system.configurations</source>
+                <target>پیکربندی نرم‌افزار</target>
+            </trans-unit>
+            <trans-unit id="38">
+                <source>label.system.logs</source>
+                <target>لاگ‌های نرم‌افزار</target>
+            </trans-unit>
+            <trans-unit id="39">
+                <source>label.system.analytics</source>
+                <target>آمار نرم‌افزار</target>
+            </trans-unit>
+            <trans-unit id="40">
+                <source>label.system.info</source>
+                <target>اطلاعات نرم‌افزار</target>
+            </trans-unit>
+            <trans-unit id="41">
+                <source>label.search.messages</source>
+                <target>جستجوی پیامها...</target>
+            </trans-unit>
+            <trans-unit id="42">
+                <source>label.roles.management</source>
+                <target>مدیریت Role‌ها</target>
+            </trans-unit>
+            <trans-unit id="43">
+                <source>label.users.actiongroup_management</source>
+                <target>مدیریت گروه‌های عملیاتی</target>
+            </trans-unit>
+
+            <trans-unit id="44">
+                <source>label.submit</source>
+                <target>ثبت</target>
+            </trans-unit>
+            <trans-unit id="45">
+                <source>label.basic_data</source>
+                <target>اطلاعات پایه</target>
+            </trans-unit>
+            <trans-unit id="46">
+                <source>label.basic_data.desc</source>
+                <target>اطلاعات اساسی</target>
+            </trans-unit>
+            <trans-unit id="47">
+                <source>label.users.username</source>
+                <target>نام کاربری</target>
+            </trans-unit>
+            <trans-unit id="48">
+                <source>label.users.firstname</source>
+                <target>نام</target>
+            </trans-unit>
+            <trans-unit id="49">
+                <source>label.users.lastname</source>
+                <target>نام خانوادگی</target>
+            </trans-unit>
+            <trans-unit id="50">
+                <source>label.sex</source>
+                <target>جنسیت</target>
+            </trans-unit>
+            <trans-unit id="51">
+                <source>label.users.sex.male</source>
+                <target>مذکر</target>
+            </trans-unit>
+            <trans-unit id="52">
+                <source>label.users.sex.female</source>
+                <target>مونث</target>
+            </trans-unit>
+            <trans-unit id="53">
+                <source>label.users.birthday</source>
+                <target>تاریخ تولد</target>
+            </trans-unit>
+            <trans-unit id="54">
+                <source>label.comment</source>
+                <target>توضیحات</target>
+            </trans-unit>
+            <trans-unit id="55">
+                <source>label.contact_data</source>
+                <target>مشخصات ارتباطی</target>
+            </trans-unit>
+            <trans-unit id="56">
+                <source>label.contact_data.desc</source>
+                <target>مشخصات ارتباطی کاربر</target>
+            </trans-unit>
+            <trans-unit id="57">
+                <source>label.email</source>
+                <target>ایمیل</target>
+            </trans-unit>
+            <trans-unit id="58">
+                <source>label.cellphone</source>
+                <target>شماره موبایل</target>
+            </trans-unit>
+            <trans-unit id="59">
+                <source>label.system_data</source>
+                <target>اطلاعات سیستمی</target>
+            </trans-unit>
+            <trans-unit id="60">
+                <source>label.system_data_desc</source>
+                <target>اطلاعات سیستمی کاربر</target>
+            </trans-unit>
+            <trans-unit id="61">
+                <source>label.users.status</source>
+                <target>وضعیت کاربر</target>
+            </trans-unit>
+            <trans-unit id="62">
+                <source>label.users.not_verified</source>
+                <target>تائید نشده</target>
+            </trans-unit>
+            <trans-unit id="63">
+                <source>label.users.not_validated</source>
+                <target>مجاز نشده</target>
+            </trans-unit>
+            <trans-unit id="64">
+                <source>label.users.verified</source>
+                <target>تائید شده</target>
+            </trans-unit>
+            <trans-unit id="65">
+                <source>label.users.active</source>
+                <target>فعال</target>
+            </trans-unit>
+            <trans-unit id="66">
+                <source>label.users.deactivated</source>
+                <target>غیرفعال</target>
+            </trans-unit>
+            <trans-unit id="67">
+                <source>label.users.deleted</source>
+                <target>حذف شده</target>
+            </trans-unit>
+            <trans-unit id="68">
+                <source>label.users.locked</source>
+                <target>قفل شده</target>
+            </trans-unit>
+            <trans-unit id="69">
+                <source>label.users.expired</source>
+                <target>زمان انقضاء سپری شده</target>
+            </trans-unit>
+            <trans-unit id="70">
+                <source>label.locale</source>
+                <target>زبان</target>
+            </trans-unit>
+            <trans-unit id="71">
+                <source>label.global</source>
+                <target>عمومی</target>
+            </trans-unit>
+            <trans-unit id="72">
+                <source>label.visible</source>
+                <target>قابل مشاهده</target>
+            </trans-unit>
+            <trans-unit id="73">
+                <source>label.auth.password_confirmed</source>
+                <target>تکرار کلمه عبور</target>
+            </trans-unit>
+            <trans-unit id="74">
+                <source>label.auth.password_mismatch</source>
+                <target>عدم انطباق کلمه عبور</target>
+            </trans-unit>
+            <trans-unit id="75">
+                <source>label.users</source>
+                <target>کاربران</target>
+            </trans-unit>
+            <trans-unit id="76">
+                <source>label.id</source>
+                <target>شناسه</target>
+            </trans-unit>
+            <trans-unit id="77">
+                <source>label.users.type</source>
+                <target>نوع کاربر</target>
+            </trans-unit>
+            <trans-unit id="78">
+                <source>label.created_at</source>
+                <target>تاریخ ساخت</target>
+            </trans-unit>
+            <trans-unit id="79">
+                <source>label.users.fullname</source>
+                <target>نام کامل</target>
+            </trans-unit>
+            <trans-unit id="80">
+                <source>label.users.lastseen</source>
+                <target>آخرین فعالیت</target>
+            </trans-unit>
+            <trans-unit id="81">
+                <source>label.actions</source>
+                <target>عملیات</target>
+            </trans-unit>
+
+            <trans-unit id="82">
+                <source>label.users.edit_user</source>
+                <target>ویرایش کاربر</target>
+            </trans-unit>
+            <trans-unit id="83">
+                <source>label.update</source>
+                <target>بروزرسانی</target>
+            </trans-unit>
+            <trans-unit id="84">
+                <source>label.updated.successfully</source>
+                <target>با موفقیت بروزرسانی شد</target>
+            </trans-unit>
+            <trans-unit id="85">
+                <source>form.label.delete</source>
+                <target>حذف</target>
+            </trans-unit>
+            <trans-unit id="86">
+                <source>label.profile.photo</source>
+                <target>عکس پروفایل</target>
+            </trans-unit>
+            <trans-unit id="87">
+                <source>label.users.national_code</source>
+                <target>کد ملی</target>
+            </trans-unit>
+            <trans-unit id="88">
+                <source>label.type</source>
+                <target>نوع</target>
+            </trans-unit>
+            <trans-unit id="89">
+                <source>label.roles</source>
+                <target>Roleها</target>
+            </trans-unit>
+            <trans-unit id="90">
+                <source>label.roles.title</source>
+                <target>عنوان Role</target>
+            </trans-unit>
+            <trans-unit id="91">
+                <source>label.roles.role</source>
+                <target>Role</target>
+            </trans-unit>
+            <trans-unit id="92">
+                <source>label.roles.new</source>
+                <target>Role حدید</target>
+            </trans-unit>
+            <trans-unit id="93">
+                <source>label.roles.new_desc</source>
+                <target>تعریف Role جدید در سیستم</target>
+            </trans-unit>
+            <trans-unit id="94">
+                <source>label.title</source>
+                <target>عنوان</target>
+            </trans-unit>
+            <trans-unit id="95">
+                <source>label.action_groups</source>
+                <target>گروه‌های عملیاتی</target>
+            </trans-unit>
+            <trans-unit id="96">
+                <source>label.action_groups.desc</source>
+                <target>تعریف دسترسی برای قسمت‌های مختلف نرم‌افزار</target>
+            </trans-unit>
+            <trans-unit id="97">
+                <source>label.roles.edit</source>
+                <target>ویرایش Role</target>
+            </trans-unit>
+            <trans-unit id="98">
+                <source>label.action_groups.management</source>
+                <target>مدیریت گروه‌های عملیاتی</target>
+            </trans-unit>
+            <trans-unit id="99">
+                <source>label.action_groups.new</source>
+                <target>گروه عملیاتی جدید</target>
+            </trans-unit>
+            <trans-unit id="100">
+                <source>label.edit</source>
+                <target>ویرایش</target>
+            </trans-unit>
+            <trans-unit id="101">
+                <source>label.action_groups.code</source>
+                <target>کد گروه عملیاتی</target>
+            </trans-unit>
+            <trans-unit id="102">
+                <source>label.code</source>
+                <target>کد</target>
+            </trans-unit>
+            <trans-unit id="103">
+                <source>label.action_groups.edit</source>
+                <target>ویرایش گروه عملیاتی</target>
+            </trans-unit>
+            <trans-unit id="104">
+                <source>label.view_website</source>
+                <target>مشاهده سایت</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

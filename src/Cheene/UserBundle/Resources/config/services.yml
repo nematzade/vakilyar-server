@@ -1,0 +1,41 @@
+services:
+    security.access.action_voter:
+        class: Cheene\UserBundle\Security\Authorization\Voter\ActionVoter
+        arguments: [ '@doctrine.orm.entity_manager' ]
+        public: false
+        tags:
+            - { name: security.voter }
+    kernel.listener.auto_authorization_listener:
+        class: Cheene\UserBundle\EventListener\AutoAuthorizationListener
+        arguments: [ '@security.authorization_checker' , '@security.token_storage' , '@annotations.reader' ]
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+    cheene.command.user.expire_verification:
+        class: Cheene\UserBundle\Console\Command\ExpireVerificationToken
+        tags:
+            - { name: console.command }
+    cheene.user.verification:
+         class: Cheene\UserBundle\Services\UserVerificationService
+         arguments: [ '@service_container' ]
+
+    container.listener.user:
+         class: Cheene\UserBundle\Entity\Lifecycle\UserListener
+         arguments: [ '@service_container' ]
+         tags:
+            - { name: doctrine.orm.entity_listener }
+
+    user_datatables:
+         class: Cheene\UserBundle\Datatables\UserDatatable
+         tags:
+            - { name: 'sg.datatable.view' }
+
+    role_datatables:
+         class: Cheene\UserBundle\Datatables\RoleDatatable
+         tags:
+            - { name: 'sg.datatable.view' }
+
+    actiongroup_datatables:
+        class: Cheene\UserBundle\Datatables\ActionGroupDatatable
+        tags:
+            - { name: 'sg.datatable.view' }
+

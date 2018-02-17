@@ -1,0 +1,50 @@
+{% block stylesheets %}
+    {% if app.request.getLocale() == 'en' %}
+        {#assets/global/plugins//select2.css#}
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+        {% stylesheets filter='cssrewrite'
+        'bundles/cheenebackend/assets/global/plugins/font-awesome/css/font-awesome.min.css'
+        'bundles/cheenebackend/assets/global/plugins/simple-line-icons/simple-line-icons.min.css'
+        'bundles/cheenebackend/assets/global/plugins/bootstrap/css/bootstrap.min.css'
+        'bundles/cheenebackend/assets/global/plugins/uniform/css/uniform.default.css'
+        'bundles/cheenebackend/assets/global/plugins/fullcalendar/fullcalendar.min.css'
+        'bundles/cheenebackend/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css'
+        'bundles/cheenebackend/assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css'
+        'bundles/cheenebackend/assets/global/plugins/pace/themes/pace-theme-flash-rtl.css'
+        'bundles/cheenebackend/assets/global/plugins/select2/select2.css'
+        'bundles/cheenebackend/assets/global/css/components-md.css'
+        'bundles/cheenebackend/assets/global/css/plugins-md.css'
+        'bundles/cheenebackend/assets/admin/layout/css/layout.css'
+        'bundles/cheenebackend/assets/admin/layout/css/themes/darkblue.css'
+        'bundles/cheenebackend/assets/admin/layout/css/custom.css'
+        'bundles/cheenebackend/assets/admin/pages/css/profile.css'
+        %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+    {% else %}
+        {# RTL Languages #}
+        {% stylesheets filter='cssrewrite'
+        'bundles/cheenebackend/assets/global/plugins/font-awesome/css/font-awesome.min.css'
+        'bundles/cheenebackend/assets/global/plugins/simple-line-icons/simple-line-icons.min.css'
+        'bundles/cheenebackend/assets/global/plugins/bootstrap/css/bootstrap-rtl.min.css'
+        'bundles/cheenebackend/assets/global/plugins/uniform/css/uniform.default.css'
+        'bundles/cheenebackend/assets/global/plugins/bootstrap-switch/css/bootstrap-switch-rtl.min.css'
+        'bundles/cheenebackend/assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css'
+        'bundles/cheenebackend/assets/global/plugins/fullcalendar/fullcalendar.min.css'
+        'bundles/cheenebackend/assets/global/plugins/fancybox/source/jquery.fancybox.css'
+        'bundles/cheenebackend/assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap-rtl.css'
+        'bundles/cheenebackend/assets/global/plugins/bootstrap-summernote/summernote.css'
+        'bundles/cheenebackend/assets/global/plugins/bootstrap-toastr/toastr.min.css'
+        'bundles/cheenebackend/assets/global/plugins/pace/themes/pace-theme-flash-rtl.css'
+        'bundles/cheenebackend/assets/global/plugins/select2/select2.css'
+        'bundles/cheenebackend/assets/global/css/components-md-rtl.css'
+        'bundles/cheenebackend/assets/global/css/plugins-md-rtl.css'
+        'bundles/cheenebackend/assets/admin/layout/css/layout-rtl.css'
+        'bundles/cheenebackend/assets/admin/layout/css/themes/darkblue-rtl.css'
+        'bundles/cheenebackend/assets/admin/layout/css/custom-rtl.css'
+        'bundles/cheenebackend/assets/admin/pages/css/profile-rtl.css'
+        %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+    {% endif %}
+{% endblock %}

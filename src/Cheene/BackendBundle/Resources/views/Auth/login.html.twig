@@ -1,0 +1,56 @@
+{% extends '@CheeneBackend/Auth/base.html.twig' %}
+
+{% block body %}
+        <form class="login-form" action="{{ path("backend_auth_login_check") }}" method="POST">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+
+            <h3 class="form-title">{% trans from 'titles' %}title.login{% endtrans %}</h3>
+            {% if error %}
+                <div class="Metronic-alerts alert alert-warning note-bordered fade in">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                    {{ error.messageKey|trans(error.messageData) }}
+                </div>
+            {% endif %}
+            <div class="alert alert-danger display-hide">
+                <button class="close" data-close="alert"></button>
+                <span>{% trans from 'errors' %}error.auth.user_pass_empty{% endtrans %}</span>
+            </div>
+
+            <div class="form-group">
+                <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                <label class="control-label visible-ie8 visible-ie9">
+                    {% trans from 'labels' %}label.auth.username{% endtrans %}
+                </label>
+                <div class="input-icon">
+                    <i class="fa fa-user"></i>
+                    <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
+                           placeholder="{% trans from 'labels' %}label.auth.username{% endtrans %}"
+                           name="_username"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9">{% trans from 'labels' %}label.auth.password{% endtrans %}</label>
+                <div class="input-icon">
+                    <i class="fa fa-lock"></i>
+                    <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="{% trans from 'labels' %}label.auth.password{% endtrans %}" name="_password"/>
+                </div>
+            </div>
+            <div class="form-actions">
+                <label class="checkbox">
+                    <input type="checkbox" name="_remember_me" value="1"/> {% trans from 'buttons' %}
+                    button.auth.remember_me{% endtrans %} </label>
+                <button type="submit" class="btn blue pull-right">
+                    {% trans from 'buttons' %}button.auth.login{% endtrans %} <i class="m-icon-swapleft m-icon-white"></i>
+                </button>
+            </div>
+            <div class="forget-password">
+                <h4>{% trans from 'labels' %}label.auth.forget_password{% endtrans %}</h4>
+                <p>
+                    {% set forget_link %}<a href="" id="forget-password">{% trans from 'labels' %}
+                        label.here{% endtrans %}</a>{% endset %}
+                    {% trans with {'%link%': forget_link} from 'labels' %}label.auth.forget_password.desc{% endtrans %}
+                </p>
+            </div>
+        </form>
+{% endblock %}

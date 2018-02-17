@@ -1,0 +1,23 @@
+{{form_start(edit_form, { 'attr': {'class': 'modal_role_form'} })}}
+	<div class="row">
+		<div class="col-sm-2" style="margin-top:6px;">
+			{{ form_label(edit_form.type) }}
+		</div>
+		<div class="col-sm-10">
+			{{ form_widget(edit_form.type, { 'attr': {'class': 'form-control'} }) }}
+		</div>
+	</div>
+	
+	<hr>
+	
+	<div class="row">
+		<div class="col-sm-2" style="margin-top:6px;">
+			{{ form_label(edit_form.roles) }}
+		</div>
+		<div class="col-sm-10">
+			{{ form_widget(edit_form.roles) }}
+		</div>
+	</div>
+
+	{# {{form_row(edit_form.submit)}} #}
+{{form_end(edit_form)}}

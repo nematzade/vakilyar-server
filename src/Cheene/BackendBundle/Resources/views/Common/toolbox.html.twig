@@ -1,0 +1,50 @@
+{% macro portlet(icon='fa fa-gift', color='blue', title, description, content, actions='', class, reloadable_id='', colNum = 6) %}
+    <div class="col-md-{{ colNum }}">
+        <div class="portlet box {{ color }} {{ class }}">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="{{ icon }}"></i>{{ title }}
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse" data-original-title="" title=""></a>
+                    {% if reloadable_id != '' %}
+                    <a href="javascript:;" class="reload" id="{{ reloadable_id }}" data-original-title="" title=""></a>
+                    {% endif %}
+
+                    <a href="javascript:;" class="remove" data-original-title="" title=""></a>
+                </div>
+            </div>
+            <div class="portlet-body form" style="display: block;">
+                <div class="form-body">
+                    <h3>{{ description }}</h3>
+                    {{ content }}
+                </div>
+                {% if actions != '' %}
+                    <div class="form-actions">
+                        {{ actions }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+
+{% macro breadcrumb_start() %}
+<ul class="page-breadcrumb">
+    {% endmacro %}
+    {% macro breadcrumb(title, href='javascript:;', last=false, icon='') %}
+        <li>
+            {% if icon != '' %}
+                <i class="{{ icon }}"></i>
+            {% endif %}
+            <a href="{{ href }}">{{ title }}</a>
+            {% if last == false %}
+                <i class="fa fa-angle-left"></i>
+            {% endif %}
+        </li>
+    {% endmacro %}
+
+    {% macro breadcrumb_end() %}
+</ul>
+{% endmacro %}

@@ -1,0 +1,170 @@
+{% extends 'CheeneBackendBundle:Common:base.html.twig' %}
+{% import 'CheeneBackendBundle:Common:form.html.twig' as _t %}
+{% import 'CheeneBackendBundle:Common:toolbox.html.twig' as toolbox %}
+
+{% block title %}
+    {#{% trans from 'labels' %}label.role_edit{% endtrans %}#}
+    {{ edit_form.title.vars["value"] }}
+{% endblock title %}
+
+{% form_theme edit_form _t %}
+
+{% block body -%}
+
+    <h3 class="page-title">
+        {% trans from 'labels' %}label.roles.edit{% endtrans %}
+        {#<small>{% trans from 'labels' %}label.roles.edit{% endtrans %}</small>#}
+    </h3>
+
+    {{ form_start(edit_form) }}
+    <div class="page-bar">
+        {{ toolbox.breadcrumb_start() }}
+        {{ toolbox.breadcrumb('label.dashboard'|trans([], 'labels'),'/', false,'fa fa-home') }}
+        {{ toolbox.breadcrumb('label.roles.management'|trans([], 'labels'), path('backend_role_index') ) }}
+        {{ toolbox.breadcrumb('label.roles.edit'|trans([], 'labels'), path('backend_role_edit', {'id':  entity.id}), true) }}
+        {{ toolbox.breadcrumb_end() }}
+        <div class="btn-group pull-right">
+            {{ form_widget(edit_form.submit) }}
+        </div>
+    </div>
+
+    {# Basic data portlet #}
+    {% set basic_data_title %}
+    {% trans from "labels" %}label.basic_data{% endtrans %}
+    {% endset %}
+
+    {% set action_groups_title %}
+    {% trans from "labels" %}label.action_groups{% endtrans %}
+    {% endset %}
+
+    {% set basic_data_desc %}
+    {% trans from "labels"%}label.basic_data.desc{% endtrans %}
+    {% endset %}
+    {% set action_groups_desc %}
+    {% trans from "labels" %}label.action_groups.desc{% endtrans %}
+    {% endset %}
+
+    {% set basic_data_content %}
+    {{ form_row(edit_form.title) }}
+    {{ form_row(edit_form.role) }}
+    {{ form_row(edit_form.visible) }}
+    {% endset %}
+
+    {% set action_groups_content %}
+        <div class="form-group">
+            <label class="col-sm-4 control-label required" for="action_filter" >Filter</label>
+            <div class="col-sm-8">
+                <input type="text" id="action_filter" class="form-control" >
+            </div>
+        </div>
+    {{ form_row(edit_form.actionGroups) }}
+    {% endset %}
+    {# End basic data portlet #}
+
+    <div class="clearfix"></div>
+
+    <div class="row">
+
+        {{ toolbox.portlet('fa fa-book' , 'blue', basic_data_title , basic_data_desc, basic_data_content , '','','',6 ) }}
+        {{ toolbox.portlet('fa fa-book' , 'blue', action_groups_title , action_groups_desc, action_groups_content , '','','',6 ) }}
+    </div>
+    {{ form_end(edit_form) }}
+    <div class="clearfix"></div>
+
+    <div class="hidden">{{ form(delete_form) }}</div>
+
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <style>
+        #Role_actionGroups {
+            position: relative;
+        }
+    </style>
+    <script type="text/javascript" >
+        var actionObj = $('#Role_actionGroups');
+        var checkBoxList = new Array();
+        var checkboxHeight = actionObj.children('.checkbox').eq(0).outerHeight() + 8;
+        var cnt = 0;
+        actionObj.children('.checkbox').each(function () {
+            var name = $(this).text().toLowerCase();
+            checkBoxList.push({
+                'id': cnt,
+                'checked': $(this).find('input').is(":checked"),
+                'name': name,
+                'visible': true
+            });
+            $(this).attr('id', 'checkbox_' + cnt).css({
+                'position': 'absolute',
+                'right': '0',
+            });
+            $(this).find('input').attr('data-id', cnt);
+            cnt++;
+        });
+
+        function sortByChecked() {
+            var hold;
+            for (var i = 0; i < checkBoxList.length; i++) {
+                for (var j = i; j < checkBoxList.length; j++) {
+                    if (checkBoxList[i].visible < checkBoxList[j].visible) {
+                        hold = checkBoxList[i];
+                        checkBoxList[i] = checkBoxList[j];
+                        checkBoxList[j] = hold;
+                    }
+                }
+            }
+            for (var i = 0; i < checkBoxList.length; i++) {
+                for (var j = i; j < checkBoxList.length; j++) {
+                    if (    checkBoxList[i].checked < checkBoxList[j].checked && checkBoxList[j].visible &&
+                            checkBoxList[i].visible) {
+                        hold = checkBoxList[i];
+                        checkBoxList[i] = checkBoxList[j];
+                        checkBoxList[j] = hold;
+                    }
+                }
+            }
+        }
+        function searchByName(_name) {
+            for (var i = 0; i < checkBoxList.length; i++) {
+                if (_name == '' || checkBoxList[i].name.indexOf(_name) > -1) {
+                    checkBoxList[i].visible = true;
+                }
+                else {
+                    checkBoxList[i].visible = false;
+                }
+            }
+        }
+        function placeCheckBoxes() {
+            actionObj.css({
+                'height': (checkboxHeight*checkBoxList.length)+'px'
+            });
+            for (var i = 0; i < checkBoxList.length; i++) {
+                $('#checkbox_'+checkBoxList[i].id).css({
+                    'top': (checkboxHeight*i)+'px',
+                    'opacity': (checkBoxList[i].visible? '1':'0.5')
+                });
+            }
+        }
+        function findById(_id) {
+            for (var i = 0; i < checkBoxList.length; i++) {
+                if (checkBoxList[i].id == _id) {
+                    return i;
+                }
+            }
+        }
+
+        sortByChecked();
+        placeCheckBoxes();
+
+        $(document).on('input', '#action_filter', function () {
+            searchByName($(this).val());
+            sortByChecked();
+            placeCheckBoxes();
+        }).on('click', '#Role_actionGroups input[type="checkbox"]', function () {
+            var id = $(this).data('id');
+            var index = findById(id);
+            checkBoxList[index].checked = $(this).is(":checked");
+        });
+
+    </script>
+{% endblock %}

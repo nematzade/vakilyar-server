@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="{{ app.request.getLocale() }}" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="{{ app.request.getLocale() }}" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="{{ app.request.getLocale() }}" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8"/>
+    <title>{% block title %}داشبورد مدیریت چینه{% endblock title %}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="Reza Seyf" name="author"/>
+    <meta content="reza@seyf.fr" name="email"/>
+    <meta content="Cheene Server" name="description"/>
+    {% image 'bundles/cheenebackend/images/favico.png' %}
+    <link rel="icon" type="image/png" href="{{ asset_url }}" />
+    {% endimage %}
+    {% block stylesheets %}
+        {% include '@CheeneBackend/Common/stylesheets.html.twig' %}
+    {% endblock %}
+</head>
+<body class="page-md page-header-fixed page-quick-sidebar-over-content">
+
+<!-- BEGIN HEADER -->
+<div class="page-header md-shadow-z-1-i navbar navbar-fixed-top">
+    {% include '@CheeneBackend/Common/header.html.twig' %}
+</div>
+
+
+{% block modals %}
+    {% include '@CheeneBackend/Common/common_modal.html.twig' %}
+{% endblock %}
+
+<!-- END HEADER -->
+<div class="clearfix">
+</div>
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+    <div class="page-sidebar-wrapper">
+        {% include 'CheeneBackendBundle:Common:sidebar_items.html.twig' %}
+    </div>
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+    <a href="javascript:;" class="page-quick-sidebar-toggler"><i class="icon-close"></i></a>
+</div>
+<!-- END CONTAINER -->
+
+<!-- BEGIN FOOTER -->
+{% include '@CheeneBackend/Common/footer.html.twig' %}
+<!-- END FOOTER -->
+
+{% block javascripts %}
+    {% include '@CheeneBackend/Common/javascripts.html.twig' %}
+{% endblock %}
+</body>
+</html>
+

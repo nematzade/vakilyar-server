@@ -1,0 +1,67 @@
+{% extends 'CheeneBackendBundle:Common:base.html.twig' %}
+{% import 'CheeneBackendBundle:Common:form.html.twig' as _t %}
+{% import 'CheeneBackendBundle:Common:toolbox.html.twig' as toolbox %}
+
+{% block title %}
+    {% trans from 'labels' %}label.roles.new{% endtrans %}
+{% endblock title %}
+
+{% form_theme form _t %}
+
+{% block body -%}
+
+    <h3 class="page-title">
+        {% trans from 'labels' %}label.roles.new{% endtrans %}
+        <small>{% trans from 'labels' %}label.roles.new_desc{% endtrans %}</small>
+    </h3>
+
+    {{ form_start(form) }}
+    <div class="page-bar">
+        {{ toolbox.breadcrumb_start() }}
+        {{ toolbox.breadcrumb('label.dashboard'|trans([], 'labels'),'/', false,'fa fa-home') }}
+        {{ toolbox.breadcrumb('label.roles.management'|trans([], 'labels'), path('backend_role_index') ) }}
+        {{ toolbox.breadcrumb('label.roles.new'|trans([], 'labels'), path('backend_role_new'), true) }}
+        {{ toolbox.breadcrumb_end() }}
+        <div class="btn-group pull-right">
+            {{ form_widget(form.submit) }}
+        </div>
+    </div>
+
+    {# Basic data portlet #}
+    {% set basic_data_title %}
+    {% trans from "labels" %}label.basic_data{% endtrans %}
+    {% endset %}
+
+    {% set action_groups_title %}
+    {% trans from "labels" %}label.action_groups{% endtrans %}
+    {% endset %}
+
+    {% set basic_data_desc %}
+    {% trans from "labels"%}label.basic_data.desc{% endtrans %}
+    {% endset %}
+    {% set action_groups_desc %}
+    {% trans from "labels" %}label.action_groups.desc{% endtrans %}
+    {% endset %}
+
+
+    {% set basic_data_content %}
+    {{ form_row(form.title) }}
+    {{ form_row(form.role) }}
+    {{ form_row(form.visible) }}
+    {% endset %}
+
+    {% set action_groups_content %}
+    {{ form_row(form.actionGroups) }}
+    {% endset %}
+    {# End basic data portlet #}
+
+    <div class="clearfix"></div>
+
+    <div class="row">
+        {{ toolbox.portlet('fa fa-book' , 'blue', basic_data_title , basic_data_desc, basic_data_content , '','','',6 ) }}
+        {{ toolbox.portlet('fa fa-book' , 'blue', action_groups_title , action_groups_desc, action_groups_content , '','','',6 ) }}
+    </div>
+    {{ form_end(form) }}
+    <div class="clearfix"></div>
+
+{% endblock %}

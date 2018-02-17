@@ -1,0 +1,33 @@
+{% extends 'CheeneBackendBundle:Common:base.html.twig' %}
+{% import '@CheeneBackend/Common/toolbox.html.twig' as toolbox %}
+
+{% block title %}
+    {% trans from 'labels' %}label.action_groups.management{% endtrans %}
+{% endblock title %}
+
+{% block body -%}
+    <h3 class="page-title">
+        {% trans from 'labels' %}label.action_groups.management{% endtrans %}
+        {#<small>{% trans from 'labels' %}label.action_groups.management_desc{% endtrans %}</small>#}
+    </h3>
+    <div class="page-bar">
+        {{ toolbox.breadcrumb_start() }}
+        {{ toolbox.breadcrumb('label.dashboard'|trans([], 'labels'),'/', false,'fa fa-home') }}
+        {{ toolbox.breadcrumb('label.action_groups.management'|trans([], 'labels'), path('backend_action_group_index'), true ) }}
+        {{ toolbox.breadcrumb_end() }}
+        <div class="page-toolbar">
+            <div class="btn-group pull-right">
+                <a href="{{ path('backend_action_group_new') }}" class="btn blue btn-default">
+                    <i class="fa fa-plus"></i><span class="hidden-480">{% trans from 'labels' %}label.action_groups.new{% endtrans %}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    {{ datatable_render_html(datatable) }}
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ datatable_render_js(datatable) }}
+{% endblock %}

@@ -1,0 +1,51 @@
+services:
+    ## Symfony Exception Listener For Custom Errors
+    kernel.listener.exception_listener:
+        class: Cheene\CoreBundle\EventListener\ExceptionListener
+        arguments: ['@service_container']
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+
+    ## Symfony OnKernelRequestHandler For Custom Behaviors on Kernel Requests
+    kernel.listener.on_request:
+        class: Cheene\CoreBundle\EventListener\OnKernelRequestHandler
+        arguments: ['@service_container']
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
+
+    ## Cheene Encoder Service
+    cheene.security.legacy_encoder:
+            class: Cheene\CoreBundle\Security\Encoder\LegacyCheeneEncoder
+
+    ## Cheene Locale Listener
+    cheene.locale_listener:
+        class: Cheene\CoreBundle\EventListener\LocaleListener
+        arguments: ["%kernel.default_locale%"]
+        tags:
+            - { name: kernel.event_subscriber }
+
+    ## Cheene User Locale Listener
+    cheene.user_locale_listener:
+        class: Cheene\CoreBundle\EventListener\UserLocaleListener
+        arguments: ["@session"]
+        tags:
+            - { name: kernel.event_listener, event: security.interactive_login, method: onInteractiveLogin }
+
+    ## Cheene Actions Loader
+    cheene.command.actions_loader:
+        class: Cheene\CoreBundle\Console\Command\ActionLoaderCommand
+        tags:
+            - { name: console.command }
+
+    ## Cheene Array Translator
+    cheene.array_translator:
+        class: Cheene\CoreBundle\Services\ArrayTranslator
+        arguments: [ '@service_container' ]
+
+    ## Cheene User Activity Monitor
+    user_activity_monitor_listener:
+        class: Cheene\CoreBundle\Services\UserMonitor
+        arguments: [ '@security.token_storage', '@service_container' ]
+        tags:
+          - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }

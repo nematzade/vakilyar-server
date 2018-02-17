@@ -1,0 +1,49 @@
+{% block javascripts %}
+
+{% javascripts
+
+'bundles/cheenebackend/assets/global/plugins/jquery.min.js'
+'bundles/cheenebackend/assets/global/plugins/jquery-migrate.min.js'
+'bundles/cheenebackend/assets/global/plugins/jquery-ui/jquery-ui.min.js'
+'bundles/cheenebackend/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js'
+'bundles/cheenebackend/assets/global/plugins/jquery.blockui.min.js'
+'bundles/cheenebackend/assets/global/plugins/jquery.cokie.min.js'
+'bundles/cheenebackend/assets/global/plugins/uniform/jquery.uniform.min.js'
+'bundles/cheenebackend/assets/global/plugins/jquery-validation/js/jquery.validate.min.js'
+
+'bundles/cheenebackend/assets/global/plugins/datatables/all.min.js'
+'bundles/cheenebackend/assets/global/plugins/moment.min.js'
+'bundles/fosjsrouting/js/router.js'
+
+'bundles/cheenebackend/assets/global/plugins/bootstrap/js/bootstrap.min.js'
+'bundles/cheenebackend/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'
+'bundles/cheenebackend/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js'
+
+'bundles/cheenebackend/assets/global/scripts/metronic.js'
+'bundles/cheenebackend/assets/admin/layout2/scripts/layout.js'
+'bundles/cheenebackend/assets/admin/layout2/scripts/demo.js' %}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+<script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+
+
+    {% javascripts
+    'bundles/cheenebackend/assets/global/plugins/backstretch/jquery.backstretch.min.js'
+    'bundles/cheenebackend/assets/global/plugins/select2/select2.min.js'
+    'bundles/cheenebackend/assets/admin/pages/scripts/login-soft.js'
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    <script>
+        jQuery(document).ready(function() {
+            Metronic.init(); // init metronic core components
+            Layout.init(); // init current layout
+            Login.init();
+            Demo.init();
+        });
+    </script>
+
+
+{% endblock %}

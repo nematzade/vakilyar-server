@@ -1,0 +1,64 @@
+{% macro menu(title, controller_name, href='javascript:;', dropdown=true, islast=false , icon='fa fa-list') %}
+     {% set active_controller = app.request.attributes.get('_controller') %}
+<li class="cheene-sidebar {% if islast == true %}last{% endif %} {% if controller_name in active_controller %}active open{% endif %}">
+    <a {% if dropdown == true %} class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" {% endif %}
+            href="{{ href }}"><i class="{{ icon }}"></i><span class="title">{{ title }} </span>
+        {% if dropdown == true %} <span class="arrow "></span> {% endif %}
+    </a>
+    {% if dropdown == true %}
+    <ul class="sub-menu">
+        {% endif %}
+        {% endmacro %}
+        {% macro end_menu(dropdown=true) %}
+        {% if dropdown == true %}
+    </ul>
+    {% endif %}
+</li>
+{% endmacro %}
+
+{% macro sub_menu(title, href, icon) %}
+    {% set current_route = path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) %}
+    <li {% if href == current_route %} class="active"{% endif %}>
+        <a href="{{ href }}">
+            <i class="{{ icon }}"></i>
+            {{ title }}
+        </a>
+    </li>
+{% endmacro %}
+{% import _self as self %}
+
+<!-- BEGIN SIDEBAR -->
+<div class="page-sidebar navbar-collapse collapse">
+    <ul class="page-sidebar-menu" data-keep-expanded="true" data-auto-scroll="true" data-slide-speed="200">
+        <li class="sidebar-toggler-wrapper">
+            <div class="sidebar-toggler">
+            </div>
+        </li>
+        <li class="sidebar-search-wrapper">
+            <form class="sidebar-search " action="extra_search.html" method="POST">
+                <a href="javascript:;" class="remove">
+                    <i class="icon-close"></i>
+                </a>
+                <div class="input-group">
+                    <input type="text" class="form-control">
+							<span class="input-group-btn">
+							<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
+							</span>
+                </div>
+            </form>
+        </li>
+
+        {{ self.menu('label.dashboard'|trans([], 'labels'),'Dashboard',path('backend_dashboard_index'),false,false,'icon-home') }}
+        {{ self.end_menu(false) }}
+
+        {{ self.menu('label.users.management'|trans([], 'labels'), 'Users','#',true,false,'icon-user') }}
+        {{ self.sub_menu('label.users.new_user_creation'|trans([], 'labels'), path('backend_user_create_new'),'fa fa-plus') }}
+        {{ self.sub_menu('label.users.list'|trans([], 'labels'), path('backend_user_index'),'fa fa-list') }}
+        {{ self.sub_menu('label.roles.management'|trans([], 'labels'), path('backend_role_index'),'fa fa-lock') }}
+        {{ self.sub_menu('label.users.actiongroup_management'|trans([], 'labels'), path('backend_action_group_index'),'fa fa-flash') }}
+        {{ self.end_menu() }}
+
+    </ul>
+</div>
+<!-- END SIDEBAR -->
+

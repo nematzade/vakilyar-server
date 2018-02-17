@@ -1,0 +1,179 @@
+<div class="page-header-inner">
+    {# BEGIN LOGO #}
+    <div class="page-logo">
+        <a href="/">
+            {% image 'bundles/cheenebackend/images/logo.png' %}
+            <img src="{{ asset_url }}" alt="logo" class="logo-default"/>
+            {% endimage %}
+        </a>
+        <div class="menu-toggler sidebar-toggler hide">
+        </div>
+    </div>
+    {# END LOGO #}
+
+    {# RESPONSIVE MENU#}
+    <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+    <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
+       data-target=".navbar-collapse">
+    </a>
+    <!-- END RESPONSIVE MENU TOGGLER -->
+
+    {# HEADER MENU #}
+
+    <div class="top-menu">
+        <ul class="nav navbar-nav pull-right">
+            {#<li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">#}
+                {##}
+                {#NOTIFICATION DROPDOWN#}
+                {#=====================#}
+                {#- for notidications header , we need an ajax request to give this output:#}
+                {#json (#}
+                    {#@all:    int, //count of user's unseen notifs#}
+                    {#@unseen: int //count of user's unseen notifs#}
+                {#)#}
+
+                {#- and for the notifications details we need a json like this one:#}
+                {#json {#}
+                    {#@timeage: string ,  // a string with format like 'now' , '1 hours later' and etc in user's locale#}
+                    {#@level:    enum ,   // an enum with this valid values: 'danger' , 'warning' , 'info' , 'success'#}
+                    {#@message: string ,  // the content of the notification message#}
+                {#}#}
+                {##}
+                {#{% set countUserNotifications = {#}
+                {#all : 12,#}
+                {#unseen : 10#}
+                {#} %}#}
+
+                {#{% set notifications = {#}
+                {#1 : {#}
+                {#timeago:'الان',#}
+                {#level:'success',#}
+                {#message:'نرم افزار بروزرسانی شد'#}
+                {#} ,#}
+                {#2 : {#}
+                {#timeago:'۲ دقیقه پیش',#}
+                {#level:'danger',#}
+                {#message:'تلاش برای ورود ناموفق به سیستم'#}
+                {#} ,#}
+                {#3 : {#}
+                {#timeago:'۱ ساعت پیش',#}
+                {#level:'warning',#}
+                {#message:'مشکل تاریخ در سیستم'#}
+                {#} ,#}
+                {#4 : {#}
+                {#timeago:'۱ ساعت پیش',#}
+                {#level:'info',#}
+                {#message:'پیام جدید برای شما از طرف مدیریت'#}
+                {#}#}
+                {#} %}#}
+                {#<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"#}
+                   {#data-close-others="true">#}
+                    {#<i class="icon-bell"></i>#}
+					{#<span class="badge badge-default">#}
+					{#{{ countUserNotifications.all }}#}
+                    {#</span>#}
+                {#</a>#}
+                {#<ul class="dropdown-menu">#}
+                    {#<li class="external">#}
+                        {#<h3>#}
+                            {#<span class="bold">{{ countUserNotifications.unseen }}</span> {% trans from 'labels' %}#}
+                            {#label.notification.unseen{% endtrans %}</h3>#}
+                        {#<a href="#">{% trans from 'labels' %}label.notification.view_all{% endtrans %}</a>#}
+                    {#</li>#}
+
+                    {#<li>#}
+                        {#<ul class="dropdown-menu-list scroller" style="height: 250px;"#}
+                            {#data-handle-color="#637283">#}
+                            {#{% for notifItem in notifications %}#}
+                                {#{% if notifItem.level == 'danger' %}#}
+                                    {#<li>#}
+                                        {#<a href="javascript:;">#}
+                                            {#<span class="time">{{ notifItem.timeago }}</span>#}
+                                                {#<span class="details">#}
+                                                {#<span class="label label-sm label-icon label-danger">#}
+                                                {#<i class="fa fa-bolt"></i>#}
+                                                {#</span>#}
+                                                    {#{{ notifItem.message }} </span>#}
+                                        {#</a>#}
+                                    {#</li>#}
+                                {#{% endif %}#}
+
+                                {#{% if notifItem.level == 'warning' %}#}
+                                    {#<li>#}
+                                        {#<a href="javascript:;">#}
+                                            {#<span class="time">{{ notifItem.timeago }}</span>#}
+                                                {#<span class="details">#}
+                                                {#<span class="label label-sm label-icon label-warning">#}
+                                                {#<i class="fa fa-bell-o"></i>#}
+                                                {#</span>#}
+                                                    {#{{ notifItem.message }} </span>#}
+                                        {#</a>#}
+                                    {#</li>#}
+                                {#{% endif %}#}
+
+                                {#{% if notifItem.level == 'info' %}#}
+                                    {#<li>#}
+                                        {#<a href="javascript:;">#}
+                                            {#<span class="time">{{ notifItem.timeago }}</span>#}
+                                                {#<span class="details">#}
+                                                {#<span class="label label-sm label-icon label-info">#}
+                                                {#<i class="fa fa-bullhorn"></i>#}
+                                                {#</span>{{ notifItem.message }}#}
+                                                {#</span>#}
+                                        {#</a>#}
+                                    {#</li>#}
+                                {#{% endif %}#}
+
+                                {#{% if notifItem.level == 'success' %}#}
+                                    {#<li>#}
+                                        {#<a href="javascript:;">#}
+                                            {#<span class="time">{{ notifItem.timeago }}</span>#}
+                                                {#<span class="details">#}
+                                                {#<span class="label label-sm label-icon label-success">#}
+                                                {#<i class="fa fa-plus"></i>#}
+                                                {#</span>{{ notifItem.message }}#}
+                                                {#</span>#}
+                                        {#</a>#}
+                                    {#</li>#}
+                                {#{% endif %}#}
+                            {#{% endfor %}#}
+                        {#</ul>#}
+                    {#</li>#}
+                {#</ul>#}
+            {#</li>#}
+            <!-- END NOTIFICATION DROPDOWN -->
+
+            {# user menu #}
+            <li class="dropdown dropdown-user">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                   data-close-others="true">
+
+                    {% if app.user.profileImageName is not null %}
+                        <img src="{{ vich_uploader_asset(app.user, 'profileImage') }}"  class="img-circle"  alt="Avatar">
+                    {% else %}
+                        {% image 'bundles/cheenebackend/assets/admin/layout/img/avatar.png' %}
+                        <img src="{{ asset_url }}" class="img-circle" alt=""/>
+                        {% endimage %}
+                    {% endif %}
+                    <span class="username username-hide-on-mobile">
+					{{ app.user.firstname }} {{ app.user.lastname }} </span>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-default">
+                    <li>
+                        <a href="https://www.cheene.com" target="_blank"><i
+                            class="icon-rocket"></i>{% trans from 'labels' %}
+                            label.view_website{% endtrans %} </a>
+                    </li>
+                    <li class="divider">
+                    </li>
+                    <li>
+                        <a href="{{ path('backend_auth_logout') }}"><i
+                                    class="icon-key"></i>{% trans from 'labels' %}label.auth.logout{% endtrans %}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

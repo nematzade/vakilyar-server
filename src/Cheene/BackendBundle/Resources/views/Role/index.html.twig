@@ -1,0 +1,47 @@
+{% extends 'CheeneBackendBundle:Common:base.html.twig' %}
+{% import '@CheeneBackend/Common/toolbox.html.twig' as toolbox %}
+
+{% block title %}
+    {% trans from 'labels' %}label.roles.management{% endtrans %}
+{% endblock title %}
+
+{% block body -%}
+    <h3 class="page-title">
+        {% trans from 'labels' %}label.roles{% endtrans %}
+    </h3>
+    <div class="page-bar">
+        {{ toolbox.breadcrumb_start() }}
+        {{ toolbox.breadcrumb('label.dashboard'|trans([], 'labels'),'/', false,'fa fa-home') }}
+        {{ toolbox.breadcrumb('label.roles.management'|trans([], 'labels'), path('backend_role_index'), true ) }}
+        {{ toolbox.breadcrumb_end() }}
+        <div class="page-toolbar">
+            <div class="btn-group pull-right">
+                <a href="{{ path('backend_role_new') }}" id="add_new_user" class="btn blue btn">{% trans from "buttons" %}button.roles.new{% endtrans %}</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        {{ datatable_render_html(datatable) }}
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ datatable_render_js(datatable) }}
+    {% javascripts
+    'bundles/bazingajstranslation/js/translator.min.js'
+    '@CheeneBackendBundle/Resources/public/js/userIndex.js'
+    %}
+    <script src="{{ asset_url }}"></script>
+    <script src="{{ url('bazinga_jstranslation_js', { 'domain': 'labels' }) }}"></script>
+    <script src="{{ url('bazinga_jstranslation_js', { 'domain': 'buttons' }) }}"></script>
+    {% endjavascripts %}
+    <script>
+        jQuery(document).ready(function($) {
+            userIndex.init();
+        });
+    </script>
+
+{% endblock %}

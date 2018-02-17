@@ -1,0 +1,15 @@
+{% extends '@CheeneBackend/Common/base.html.twig' %}
+
+{% block body -%}
+    <h1>Action creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('backend_action_index') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

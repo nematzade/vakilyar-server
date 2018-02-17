@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>button.auth.login</source>
+                <target state="translated">Login</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>button.auth.remember_me</source>
+                <target state="translated">Remember Me</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>button.edit</source>
+                <target state="translated">Edit</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>button.role.edit</source>
+                <target state="translated">Edit User's Role</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>button.close</source>
+                <target state="translated">Close</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>button.update</source>
+                <target state="translated">Update</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>button.users.new</source>
+                <target state="translated">Create User</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>button.submit</source>
+                <target state="translated">Submit</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>button.roles.new</source>
+                <target state="translated">New Role</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

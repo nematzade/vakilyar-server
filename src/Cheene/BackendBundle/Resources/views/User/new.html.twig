@@ -1,0 +1,114 @@
+{% extends 'CheeneBackendBundle:Common:base.html.twig' %}
+{% import 'CheeneBackendBundle:Common:form.html.twig' as _t %}
+{% import 'CheeneBackendBundle:Common:toolbox.html.twig' as toolbox %}
+{% block title %}
+    {% trans from 'labels' %}label.users.new_user_creation{% endtrans %}
+{% endblock title %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="/bundles/cheenebackend/assets/global/plugins/pwt.datepicker/dist/css/persian-datepicker-0.4.5.min.css" />
+{%  endblock %}
+
+{% form_theme form _t %}
+
+{% block body -%}
+    <h3 class="page-title">
+        {% trans from 'labels' %}label.users.new_user_creation{% endtrans %}
+    </h3>
+    {{ form_start(form) }}
+    <div class="page-bar">
+        {{ toolbox.breadcrumb_start() }}
+        {{ toolbox.breadcrumb('label.dashboard'|trans([], 'labels'),'/', false,'fa fa-home') }}
+        {{ toolbox.breadcrumb('label.users.management'|trans([], 'labels'), path('backend_user_index') ) }}
+        {{ toolbox.breadcrumb('label.users.new_user_creation'|trans([], 'labels'), path('backend_user_create_new'), true) }}
+        {{ toolbox.breadcrumb_end() }}
+        <div class="btn-group pull-right">
+            {{ form_widget(form.submit) }}
+        </div>
+    </div>
+
+    {# Basic data portlet #}
+    {% set basic_data_title %} {% trans from "labels" %}label.basic_data{% endtrans %} {% endset %}
+
+    {% set basic_data_desc %}
+         {% trans from "labels"%}label.basic_data.desc{% endtrans %}
+    {% endset %}
+
+    {% set basic_data_content %}
+        {{ form_widget(form.profileImage) }}
+        {{ form_row(form.firstname) }}
+        {{ form_row(form.lastname) }}
+        {{ form_row(form.sex) }}
+        {{ form_row(form.birthday) }}
+        {{ form_row(form.nationalCode) }}
+        <div class="hidden">
+            {{ form_row(form.jalaliBirthday) }}
+            {{ form_row(form.deleted) }}
+        </div>
+        {{ form_row(form.comment) }}
+    {% endset %}
+    {# End basic data portlet #}
+
+
+    {# contact data portlet #}
+    {% set contact_data_title %} {% trans from "labels" %}label.contact_data{% endtrans %} {% endset %}
+
+    {% set contact_data_desc %}{% trans from "labels" %}label.contact_data.desc{% endtrans %}{% endset %}
+
+    {% set contact_data_content %}
+        {{ form_row(form.email) }}
+        {{ form_row(form.cellphone) }}
+    {% endset %}
+    {# End contact data portlet #}
+
+
+    {# account data portlet #}
+    {% set account_data_title %}
+        {% trans from "labels" %}label.system_data{% endtrans %}
+    {% endset %}
+
+    {% set account_data_desc %}
+         {% trans from "labels" %}label.system_data_desc{% endtrans %}
+    {% endset %}
+
+    {% set account_data_content %}
+        {{ form_row(form.username) }}
+        {{ form_row(form.plainPassword) }}
+        {{ form_row(form.status) }}
+        {{ form_row(form.locale) }}
+        {{ form_row(form.global) }}
+        {{ form_row(form.visible) }}
+    {% endset %}
+
+    <div class="row">
+        {{ toolbox.portlet('fa fa-book' , 'blue', basic_data_title , basic_data_desc, basic_data_content , '' ) }}
+        {{ toolbox.portlet('fa fa-book' , 'blue', contact_data_title , contact_data_desc, contact_data_content , '' ) }}
+        {{ toolbox.portlet('fa fa-book' , 'blue', account_data_title , account_data_desc, account_data_content , '' ) }}
+    </div>
+    {{ form_end(form) }}
+{% endblock %}
+
+    {% block javascripts %}
+        {{ parent() }}
+        {% javascripts
+            'bundles/cheenebackend/assets/global/plugins/pwt.datepicker/lib/shamsi.js'
+            'bundles/cheenebackend/assets/global/plugins/pwt.datepicker/dist/js/persian-date-0.1.8.min.js'
+            'bundles/cheenebackend/assets/global/plugins/pwt.datepicker/dist/js/persian-datepicker-0.4.5.js'
+        %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $("#user_birthday").persianDatepicker({
+                    timePicker: {
+                        enabled: false
+                    },
+                    format: 'YYYY-MM-DD',
+                    altField: '#user_jalaliBirthday',
+                    altFormat: "g",
+                    position: [-70, 120]
+                });
+            });
+        </script>
+    {% endblock %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <title>Authentication</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="Reza Seyf" name="author"/>
+    <meta content="reza@seyf.fr" name="email"/>
+    {% include '@CheeneBackend/Auth/stylesheets.html.twig' %}
+</head>
+
+<body class="page-md login">
+<div class="logo">
+    {% image 'bundles/cheenebackend/images/logo-medium.png' %}
+    <img src="{{ asset_url }}" width="150" height="auto" alt="چینه"/>
+    {% endimage %}
+</div>
+<div class="content">
+    {% block body %}{% endblock %}
+</div>
+
+{#{% include '@CheeneBackend/Common/footer.html.twig' %}#}
+{% include '@CheeneBackend/Auth/javascripts.html.twig' %}
+
+</body>
+
+</html>

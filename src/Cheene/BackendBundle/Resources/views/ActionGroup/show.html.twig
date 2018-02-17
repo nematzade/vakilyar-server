@@ -1,0 +1,44 @@
+{% extends '@CheeneBackend/Common/base.html.twig' %}
+
+{% block body -%}
+    <h1>ActionGroup</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Parent</th>
+                <td>{{ entity.parent }}</td>
+            </tr>
+            <tr>
+                <th>Code</th>
+                <td>{{ entity.code }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ entity.title }}</td>
+            </tr>
+            <tr>
+                <th>Visible</th>
+                <td>{{ entity.visible }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('backend_action-group_index') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('backend_action-group_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

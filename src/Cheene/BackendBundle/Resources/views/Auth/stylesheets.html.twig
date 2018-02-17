@@ -1,0 +1,10 @@
+{% extends '@CheeneBackend/Common/stylesheets.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets filter='cssrewrite'
+    'bundles/cheenebackend/assets/global/plugins/select2/select2.css'
+    'bundles/cheenebackend/assets/admin/pages/css/login3-rtl.css'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
