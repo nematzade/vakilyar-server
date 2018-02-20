@@ -20,15 +20,11 @@ echo "sure?"
     sudo php app/console cache:clear --env=prod --no-debug
     sudo php app/console assetic:dump --no-debug --env=prod
     echo 'cleaning cache directory and resetting permissions...'
-    sudo chmod -R 775 ./*
-    sudo chown -R reza:reza ./*
-    sudo chmod -R 770 app/*
+    sudo chmod -R 755  ./
+    sudo chown -R reza:reza  ./
+    sudo chmod -R 777 app/*
     sudo chmod -R 775 web/*
-    sudo chmod -R 775 var/*
-    sudo chown -R reza:reza web/*
-    sudo chmod -R 775 app/cache/*
-    sudo chown -R reza:reza  app/cache/*
+    sudo chmod -R 770 var/
     php app/console assets:install
     php app/console assets:install --symlink
-    php app/console assetic:dump
     echo "done..."
