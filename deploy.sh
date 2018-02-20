@@ -1,6 +1,7 @@
 #! /bin/bash
 clear
 echo "sure?"
+    read
     git checkout devel
     sudo -u nginx git pull origin devel
     sudo -u nginx git merge master
