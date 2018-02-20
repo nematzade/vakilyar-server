@@ -21,7 +21,7 @@ echo "sure?"
     sudo php app/console assetic:dump --no-debug --env=prod
     echo 'cleaning cache directory and resetting permissions...'
     sudo chmod -R 775 ./*
-    sudo chown -R nginx:nginx ./*
+    sudo chown -R reza:reza ./*
     sudo chmod -R 770 app/*
     sudo chmod -R 775 web/*
     sudo chmod -R 775 var/*
