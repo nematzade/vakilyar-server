@@ -7,7 +7,6 @@ echo "sure?"
     sudo -u nginx git merge master
 
     git checkout master
-
     sudo -u nginx git merge devel
     sudo -u nginx git pull origin master
     sudo -u nginx git merge devel
