@@ -1,15 +1,18 @@
 #! /bin/bash
 clear
 echo "sure?"
+    read
     git checkout devel
     sudo -u nginx git pull origin devel
     sudo -u nginx git merge master
 
     git checkout master
+
     sudo -u nginx git merge devel
     sudo -u nginx git pull origin master
-    php app/console cheene:actions:load
+    sudo -u nginx git merge devel
 
+    php app/console cheene:actions:load
     php app/console doctrine:cache:clear-metadata
     php app/console doctrine:cache:clear-result
     php app/console doctrine:schema:update --force
