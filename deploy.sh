@@ -4,8 +4,8 @@ echo "sure?"
     git checkout devel
     sudo -u nginx git pull origin devel
     sudo -u nginx git merge master
-    git checkout master
 
+    git checkout master
     sudo -u nginx git merge devel
     sudo -u nginx git pull origin master
     php app/console cheene:actions:load
