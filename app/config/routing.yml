@@ -1,6 +1,6 @@
 backend_route:
     resource: "@CheeneBackendBundle/Resources/config/routing.yml"
-    host:     backend.cheene.local
+    host:     "%panel_domain%"
     prefix:   /
 
 cheene_bundle:
