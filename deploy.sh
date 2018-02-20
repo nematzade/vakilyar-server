@@ -3,13 +3,13 @@ clear
 echo "sure?"
     read
     git checkout devel
-    sudo -u nginx git pull origin devel
-    sudo -u nginx git merge master
+    sudo -u reza git pull origin devel
+    sudo -u reza git merge master
 
     git checkout master
-    sudo -u nginx git merge devel
-    sudo -u nginx git pull origin master
-    sudo -u nginx git merge devel
+    sudo -u reza git merge devel
+    sudo -u reza git pull origin master
+    sudo -u reza git merge devel
 
     php app/console cheene:actions:load
     php app/console doctrine:cache:clear-metadata
@@ -25,9 +25,9 @@ echo "sure?"
     sudo chmod -R 770 app/*
     sudo chmod -R 775 web/*
     sudo chmod -R 775 var/*
-    sudo chown -R nginx:nginx web/*
+    sudo chown -R reza:reza web/*
     sudo chmod -R 775 app/cache/*
-    sudo chown -R nginx:nginx  app/cache/*
+    sudo chown -R reza:reza  app/cache/*
     php app/console assets:install
     php app/console assets:install --symlink
     php app/console assetic:dump
