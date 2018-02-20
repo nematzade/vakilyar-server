@@ -1,7 +1,8 @@
 backend_route:
     resource: "@CheeneBackendBundle/Resources/config/routing.yml"
-    host:     backend.cheene.local
+    host:     panel.ieio.ir
     prefix:   /
+    schemes:  [https]
 
 cheene_bundle:
     resource: "@CheeneCoreBundle/Resources/config/routing.yml"
