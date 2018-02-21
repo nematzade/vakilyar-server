@@ -32,6 +32,7 @@ class AppKernel extends Kernel
             new EightPoints\Bundle\GuzzleBundle\GuzzleBundle(),
             new Misd\PhoneNumberBundle\MisdPhoneNumberBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
+            new BoShurik\TelegramBotBundle\BoShurikTelegramBotBundle,
 
             ## Cheene Bundles
             new Cheene\CoreBundle\CheeneCoreBundle(),
