@@ -2,8 +2,13 @@
 # http://symfony.com/doc/current/book/service_container.html
 parameters:
 #    parameter_name: value
-
 services:
+  app.telegram.command.help:
+      class: BoShurik\TelegramBotBundle\Telegram\Command\HelpCommand
+      arguments:
+          - "@bo_shurik_telegram_bot.command_pool"
+      tags:
+          - { name: bo_shurik_telegram_bot.command }
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
