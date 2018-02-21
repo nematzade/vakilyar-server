@@ -27,4 +27,4 @@ datatable:
 
 BoShurikTelegramBotBundle:
     resource: "@BoShurikTelegramBotBundle/Resources/config/routing.yml"
-    prefix: /_telegram/havij
+    prefix: "/_telegram/%telegram_bot_api_token%"
