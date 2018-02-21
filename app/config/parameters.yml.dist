@@ -26,3 +26,6 @@ parameters:
     redis_default: 'redis://localhost'
     redis_session: 'redis://localhost/2'
     redis_cache: 'redis://localhost/2'
+
+    telegram_bot_name: 'bot_name'
+    telegram_bot_api_token: 'bot_api_token'

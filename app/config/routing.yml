@@ -24,3 +24,7 @@ _liip_imagine:
 datatable:
     resource: "@SgDatatablesBundle/Controller/"
     type:     annotation
+
+BoShurikTelegramBotBundle:
+    resource: "@BoShurikTelegramBotBundle/Resources/config/routing.yml"
+    prefix: /_telegram/havij

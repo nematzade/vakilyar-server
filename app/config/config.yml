@@ -6,6 +6,7 @@ imports:
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 
+
 framework:
     #esi:             ~
 #    translator:      { fallbacks: ["%locale%"] }
@@ -107,6 +108,13 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+# Telegram Bot setting
+bo_shurik_telegram_bot:
+    api:
+        token: "%telegram_bot_api_token%"
+    name: "%telegram_bot_name%"
+
 
 # VichUploader Configuration
 vich_uploader:
