@@ -1,0 +1,9 @@
+frontend_index:
+    resource:   "@CheeneFrontendBundle/Controller/DefaultController.php"
+    type:       annotation
+    prefix:     /
+
+frontend_page:
+    resource:   "@CheeneFrontendBundle/Controller/PagesController.php"
+    type:       annotation
+    prefix:     /page
