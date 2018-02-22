@@ -1,0 +1,4 @@
+services:
+#    cheene_content.example:
+#        class: Cheene\ContentBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

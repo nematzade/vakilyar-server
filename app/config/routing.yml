@@ -4,6 +4,11 @@ backend_route:
     prefix:   /
     schemes:  [https]
 
+frontend_route:
+    resource: "@CheeneFrontendBundle/Resources/config/routing.yml"
+    host:     "%domain%"
+    prefix:   /
+
 cheene_bundle:
     resource: "@CheeneCoreBundle/Resources/config/routing.yml"
     prefix:   /

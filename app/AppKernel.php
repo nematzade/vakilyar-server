@@ -38,7 +38,8 @@ class AppKernel extends Kernel
             new Cheene\CoreBundle\CheeneCoreBundle(),
             new Cheene\UserBundle\CheeneUserBundle(),
             new Cheene\BackendBundle\CheeneBackendBundle(),
-            
+            new Cheene\ContentBundle\CheeneContentBundle(),
+            new Cheene\FrontendBundle\CheeneFrontendBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
