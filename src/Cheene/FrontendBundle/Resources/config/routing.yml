@@ -1,4 +1,4 @@
-frontend_index:
+frontend_default:
     resource:   "@CheeneFrontendBundle/Controller/DefaultController.php"
     type:       annotation
     prefix:     /
