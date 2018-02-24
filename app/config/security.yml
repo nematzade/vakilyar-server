@@ -51,9 +51,9 @@ security:
 
         ##### Telegram Bot
         telegram_webhook:
-            pattern: ^/_telegram$
+            pattern: ^/_telegram/507025426:AAGASeYFnQ2A89b5Hbnhs1kiF8fHkJl-RGc/$
             host:    %panel_domain%
-            anonymous: ~
+            security: false
 
         # secures part of the application
         backend:
