@@ -48,6 +48,13 @@ security:
             pattern: ^/auth/login$
             host:    %panel_domain%
             anonymous: ~
+
+        ##### Telegram Bot
+        telegram_webhook:
+            pattern: ^/_telegram$
+            host:    %panel_domain%
+            anonymous: ~
+
         # secures part of the application
         backend:
             pattern: ^/
