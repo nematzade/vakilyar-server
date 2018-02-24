@@ -211,6 +211,7 @@ class User implements AdvancedUserInterface , EquatableInterface , \Serializable
     private $deleted = false;
 
 
+
     /**
      * Constructor
      */
