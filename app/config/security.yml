@@ -27,16 +27,12 @@ security:
 
 
     firewalls:
+
+
         # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            pattern: ^/(_(profiler|telegram|wdt)|css|images|js)/
             security: false
-#        main:
-#          anonymous: ~
-#          form_login:
-#              login_path: login
-#              check_path: login
-#              provider: main
 
         ## disables authentication for assets and the profiler, adapt it according to your needs
         dev:
@@ -61,14 +57,6 @@ security:
             logout:
                 path: backend_auth_logout
                 target: backend_auth_login
-
-
-
-        ##### Telegram Bot
-        telegram_webhook:
-            pattern: ^/_telegram/507025426:AAGASeYFnQ2A89b5Hbnhs1kiF8fHkJl-RGc/$
-            host:    %panel_domain%
-            security: false
 
 
 #        main:
