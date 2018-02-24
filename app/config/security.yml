@@ -49,12 +49,6 @@ security:
             host:    %panel_domain%
             anonymous: ~
 
-        ##### Telegram Bot
-        telegram_webhook:
-            pattern: ^/_telegram/507025426:AAGASeYFnQ2A89b5Hbnhs1kiF8fHkJl-RGc/$
-            host:    %panel_domain%
-            security: false
-
         # secures part of the application
         backend:
             pattern: ^/
@@ -67,6 +61,16 @@ security:
             logout:
                 path: backend_auth_logout
                 target: backend_auth_login
+
+
+
+        ##### Telegram Bot
+        telegram_webhook:
+            pattern: ^/_telegram/507025426:AAGASeYFnQ2A89b5Hbnhs1kiF8fHkJl-RGc/$
+            host:    %panel_domain%
+            security: false
+
+
 #        main:
 #            anonymous: ~
             # activate different ways to authenticate
