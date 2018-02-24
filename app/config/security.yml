@@ -54,7 +54,6 @@ security:
             pattern: ^/_telegram/507025426:AAGASeYFnQ2A89b5Hbnhs1kiF8fHkJl-RGc/$
             host:    %panel_domain%
             security: false
-            anonymous: ~
 
         # secures part of the application
         backend:
