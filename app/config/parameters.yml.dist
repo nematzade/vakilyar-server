@@ -29,3 +29,5 @@ parameters:
 
     telegram_bot_name: ~
     telegram_bot_api_token: ~
+    email_from: noreply@ieio.ir
+    email_to: reza@seyf.fr
