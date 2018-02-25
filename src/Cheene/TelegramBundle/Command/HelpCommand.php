@@ -30,7 +30,7 @@ class HelpCommand extends AbstractCommand implements PublicCommandInterface
      */
     private $aliases;
 
-    public function __construct(CommandPool $commandPool, $description = 'Help', $aliases = array())
+    public function __construct(CommandPool $commandPool, $description = 'تست', $aliases = array())
     {
         $this->commandPool = $commandPool;
         $this->description = $description;
