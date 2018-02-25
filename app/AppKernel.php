@@ -40,6 +40,7 @@ class AppKernel extends Kernel
             new Cheene\BackendBundle\CheeneBackendBundle(),
             new Cheene\ContentBundle\CheeneContentBundle(),
             new Cheene\FrontendBundle\CheeneFrontendBundle(),
+            new Cheene\TelegramBundle\CheeneTelegramBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
