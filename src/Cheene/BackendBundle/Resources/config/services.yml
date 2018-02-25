@@ -2,3 +2,14 @@ services:
 #    backend.example:
 #        class: Cheene\BackendBundle\Example
 #        arguments: ["@service_id", "plain_value", %parameter%]
+    app.order.listener:
+          class: AppBundle\EventListener\OrderListener
+          arguments:
+              - "@templating"
+          tags:
+              - { name: kernel.event_listener, event: app.order.submit, method: onOrderSubmit }
+
+    app.telegram.order.handler:
+          class: AppBundle\Telegram\OrderHandler
+          arguments:
+              - "@doctrine_cache.providers.telegram_order_handler_cache"
