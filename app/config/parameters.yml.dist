@@ -5,7 +5,7 @@ parameters:
     database_driver:   pdo_mysql
     database_host:     127.0.0.1
     database_port:     3306
-    database_name:     cheene_db
+    database_name:     vakilyar_db
     database_user:     root
     database_password: ~
     # You should uncomment this if you want use pdo_sqlite
@@ -20,8 +20,8 @@ parameters:
     secret:            ThisTokenIsNotSoSecretChangeIt
 
     domain: cheene.local
-    panel_domain: backend.cheene.local
-    project_name: "Cheene Server"
+    panel_domain: backend.ieio.local
+    project_name: "Vakilyar"
     locale: fa
     redis_default: 'redis://localhost'
     redis_session: 'redis://localhost/2'
@@ -30,4 +30,4 @@ parameters:
     telegram_bot_name: ~
     telegram_bot_api_token: ~
     email_from: noreply@ieio.ir
-    email_to: reza@seyf.fr
+    email_to: rseyf2017@gmail.com
