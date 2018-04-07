@@ -2,3 +2,28 @@ services:
 #    cheene_content.example:
 #        class: Cheene\ContentBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+
+  contact_datatables:
+       class: Cheene\ContentBundle\Datatables\ContactDatatable
+       tags:
+          - { name: 'sg.datatable.view' }
+
+  menu_datatables:
+       class: Cheene\ContentBundle\Datatables\MenuDatatable
+       tags:
+          - { name: 'sg.datatable.view' }
+
+  page_datatables:
+       class: Cheene\ContentBundle\Datatables\PageDatatable
+       tags:
+          - { name: 'sg.datatable.view' }
+
+
+  slider_datatables:
+       class: Cheene\ContentBundle\Datatables\SliderDatatable
+       tags:
+          - { name: 'sg.datatable.view' }
+
+
+

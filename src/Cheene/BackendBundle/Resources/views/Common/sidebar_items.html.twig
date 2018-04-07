@@ -51,6 +51,12 @@
         {{ self.menu('label.dashboard'|trans([], 'labels'),'Dashboard',path('backend_dashboard_index'),false,false,'icon-home') }}
         {{ self.end_menu(false) }}
 
+
+        {{ self.menu('مدیریت صفحات','Page',path('backend_contact_index'),false,false,'icon-list') }}{{ self.end_menu(false) }}
+        {{ self.menu('مدیریت اسلایدر','Slider',path('backend_contact_index'),false,false,'icon-list') }}{{ self.end_menu(false) }}
+        {{ self.menu('مدیریت منوها','Menu',path('backend_contact_index'),false,false,'icon-list') }}{{ self.end_menu(false) }}
+        {{ self.menu('تماس‌های کاربران','Contact',path('backend_contact_index'),false,false,'icon-list') }}{{ self.end_menu(false) }}
+
         {{ self.menu('label.users.management'|trans([], 'labels'), 'Users','#',true,false,'icon-user') }}
         {{ self.sub_menu('label.users.new_user_creation'|trans([], 'labels'), path('backend_user_create_new'),'fa fa-plus') }}
         {{ self.sub_menu('label.users.list'|trans([], 'labels'), path('backend_user_index'),'fa fa-list') }}

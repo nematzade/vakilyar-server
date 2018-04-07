@@ -33,3 +33,23 @@ cheene_backend_user:
     resource:   "@CheeneBackendBundle/Controller/UserController.php"
     type:       annotation
     prefix:     /user
+
+cheene_backend_page:
+    resource:   "@CheeneBackendBundle/Controller/PageController.php"
+    type:       annotation
+    prefix:     /page
+
+cheene_backend_menu:
+    resource:   "@CheeneBackendBundle/Controller/MenuController.php"
+    type:       annotation
+    prefix:     /menu
+
+cheene_backend_slider:
+    resource:   "@CheeneBackendBundle/Controller/SliderController.php"
+    type:       annotation
+    prefix:     /slider
+
+cheene_backend_contact:
+    resource:   "@CheeneBackendBundle/Controller/ContactController.php"
+    type:       annotation
+    prefix:     /contact

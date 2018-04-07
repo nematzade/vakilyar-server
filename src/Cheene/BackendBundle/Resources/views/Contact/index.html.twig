@@ -1,0 +1,28 @@
+{% extends 'CheeneBackendBundle:Common:base.html.twig' %}
+{% import '@CheeneBackend/Common/toolbox.html.twig' as toolbox %}
+
+{% block title %}
+    تماس‌های کاربران
+{% endblock title %}
+
+{% block body -%}
+    <h3 class="page-title">
+        تماس‌های کاربران
+    </h3>
+    <div class="page-bar">
+        <div class="page-toolbar">
+            <div class="btn-group pull-right">
+                {#<a href="{{ path('backend_user_create_new') }}" id="add_new_user" class="btn blue btn">{% trans from "buttons" %}button.users.new{% endtrans %}</a>#}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        {{ datatable_render_html(datatable) }}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ datatable_render_js(datatable) }}
+{% endblock %}
