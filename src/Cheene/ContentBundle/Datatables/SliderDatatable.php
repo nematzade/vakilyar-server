@@ -37,7 +37,7 @@ class SliderDatatable extends AbstractDatatableView
         ));
 
         $this->ajax->set(array(
-            'url' => $this->router->generate('backend_user_results'),
+            'url' => $this->router->generate('backend_slider_index_results'),
             'type' => 'GET'
         ));
 
