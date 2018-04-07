@@ -2,7 +2,7 @@ backend_route:
     resource: "@CheeneBackendBundle/Resources/config/routing.yml"
     host:     "%panel_domain%"
     prefix:   /
-    schemes:  [https]
+#    schemes:  [https]
 
 frontend_route:
     resource: "@CheeneFrontendBundle/Resources/config/routing.yml"
