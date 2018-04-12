@@ -82,33 +82,31 @@ class SliderDatatable extends AbstractDatatableView
                 'title' => "عملیات",
                 'actions' => array(
                     array(
-                        'route' => 'slider_show',
+                        'route' => 'backend_slider_edit',
                         'route_parameters' => array(
                             'id' => 'id'
                         ),
-                        'label' => $this->translator->trans('datatables.actions.show'),
-                        'icon' => 'glyphicon glyphicon-eye-open',
+                        'icon' => 'fa fa-pencil',
                         'attributes' => array(
                             'rel' => 'tooltip',
-                            'title' => $this->translator->trans('datatables.actions.show'),
-                            'class' => 'btn btn-primary btn-xs',
+                            'title' => "ویرایش",
+                            'class' => 'btn btn-xs purple',
                             'role' => 'button'
                         ),
                     ),
                     array(
-                        'route' => 'slider_edit',
+                        'route' => 'backend_slider_delete',
                         'route_parameters' => array(
                             'id' => 'id'
                         ),
-                        'label' => $this->translator->trans('datatables.actions.edit'),
-                        'icon' => 'glyphicon glyphicon-edit',
+                        'icon' => 'fa fa-trash',
                         'attributes' => array(
                             'rel' => 'tooltip',
-                            'title' => $this->translator->trans('datatables.actions.edit'),
-                            'class' => 'btn btn-primary btn-xs',
+                            'title' => 'حذف',
+                            'class' => 'btn btn-xs blue',
                             'role' => 'button'
                         ),
-                    )
+                    ),
                 )
             ))
         ;

@@ -14,14 +14,26 @@ class SliderType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
-            ->add('weight')
-            ->add('header')
-            ->add('text')
-            ->add('link')
-            ->add('active')
+            ->add('title',null,array(
+                'label' => 'عنوان اسلایدر'
+            ))
+            ->add('weight',null,array(
+                'label' => 'وزن'
+            ))
+            ->add('header',null,array(
+                'label' => 'سرتیتر'
+            ))
+            ->add('text',null,array(
+                'label' => 'متن توضیح زیر سرتیتر'
+            ))
+            ->add('link',null,array(
+                'label' => 'لینک اینترنتی'
+            ))
+            ->add('active',null,array(
+                'label' => 'فعال؟'
+            ))
             ->add('sliderImage', 'vich_image', array(
-                'label' => 'اسلایدر عکس',
+                'label' => 'عکس اسلاید',
                 'required' => false,
                 'allow_delete' => true, // not mandatory, default is true
                 'download_link' => false, // not mandatory, default is true

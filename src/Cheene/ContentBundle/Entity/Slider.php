@@ -53,7 +53,7 @@ class Slider
      * @var string
      * @ORM\Column(name="link",type="string")
      */
-    private $link;
+    private $link = "http://www.example.com";
 
     /**
      * @var boolean
