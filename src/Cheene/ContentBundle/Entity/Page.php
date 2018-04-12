@@ -96,6 +96,11 @@ class Page
     private $updated_by = NULL;
 
 
+    public function __construct()
+    {
+        $this->releaseDate = new \DateTime();
+    }
+
     /**
      * Get id
      *
