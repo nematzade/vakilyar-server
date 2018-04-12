@@ -1,0 +1,49 @@
+{% extends 'CheeneBackendBundle:Common:base.html.twig' %}
+{% import 'CheeneBackendBundle:Common:form.html.twig' as _t %}
+{% import 'CheeneBackendBundle:Common:toolbox.html.twig' as toolbox %}
+
+{% block title %}
+    {#{% trans from 'labels' %}label.role_edit{% endtrans %}#}
+    {{ edit_form.title.vars["value"] }}
+{% endblock title %}
+
+{% form_theme edit_form _t %}
+
+{% block body -%}
+
+    <h3 class="page-title">ویرایش منو</h3>
+
+    {{ form_start(edit_form) }}
+    <div class="page-bar">
+        {{ toolbox.breadcrumb_start() }}
+        {{ toolbox.breadcrumb('label.dashboard'|trans([], 'labels'),'/', false,'fa fa-home') }}
+        {{ toolbox.breadcrumb('مدیریت منو‌ها', path('backend_menu_index') ) }}
+        {{ toolbox.breadcrumb('ویرایش منو', path('backend_menu_edit', {'id':  entity.id}), true) }}
+        {{ toolbox.breadcrumb_end() }}
+        <div class="btn-group pull-right">
+            {{ form_widget(edit_form.submit) }}
+        </div>
+    </div>
+
+    {# Basic data portlet #}
+    {% set basic_data_title %}
+        {% trans from "labels" %}label.basic_data{% endtrans %}
+    {% endset %}
+    {% set basic_data_desc %}
+        {% trans from "labels"%}label.basic_data.desc{% endtrans %}
+    {% endset %}
+    {% set basic_data_content %}
+        {{ form_row(edit_form.title) }}
+        {{ form_row(edit_form.weight) }}
+        {{ form_row(edit_form.menuOrder) }}
+        {{ form_row(edit_form.link) }}
+        {{ form_row(edit_form.parent) }}
+    {% endset %}
+    {# End basic data portlet #}
+
+    <div class="clearfix"></div>
+    <div class="row">
+        {{ toolbox.portlet('fa fa-book' , 'blue', basic_data_title , basic_data_desc, basic_data_content , '','','',6 ) }}
+    </div>
+    {{ form_end(edit_form) }}
+{% endblock %}

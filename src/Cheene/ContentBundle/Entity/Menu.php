@@ -41,9 +41,9 @@ class Menu
 
     /**
      * @var int
-     * @ORM\Column(name="order",type="integer")
+     * @ORM\Column(name="menu_order",type="integer")
      */
-    private $order = 1;
+    private $menuOrder = 1;
 
     /**
      * @var
@@ -55,7 +55,7 @@ class Menu
      * @var
      * @ORM\Column(name="link",type="string")
      */
-    private $link;
+    private $link = "http://www.yourlink.com/menu";
 
     /**
      * Get id
@@ -96,30 +96,6 @@ class Menu
     public function getWeight()
     {
         return $this->weight;
-    }
-
-    /**
-     * Set order
-     *
-     * @param integer $order
-     *
-     * @return Menu
-     */
-    public function setOrder($order)
-    {
-        $this->order = $order;
-
-        return $this;
-    }
-
-    /**
-     * Get order
-     *
-     * @return integer
-     */
-    public function getOrder()
-    {
-        return $this->order;
     }
 
     /**
@@ -226,5 +202,29 @@ class Menu
     public function getChild()
     {
         return $this->child;
+    }
+
+    /**
+     * Set menuOrder
+     *
+     * @param integer $menuOrder
+     *
+     * @return Menu
+     */
+    public function setMenuOrder($menuOrder)
+    {
+        $this->menuOrder = $menuOrder;
+
+        return $this;
+    }
+
+    /**
+     * Get menuOrder
+     *
+     * @return integer
+     */
+    public function getMenuOrder()
+    {
+        return $this->menuOrder;
     }
 }

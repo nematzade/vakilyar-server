@@ -63,69 +63,49 @@ class MenuDatatable extends AbstractDatatableView
         ));
         $this->columnBuilder
             ->add('id', 'column', array(
-                'title' => 'Id',
-            ))
-            ->add('weight', 'column', array(
-                'title' => 'Weight',
-            ))
-            ->add('order', 'column', array(
-                'title' => 'Order',
+                'title' => 'شناسه',
             ))
             ->add('title', 'column', array(
-                'title' => 'Title',
+                'title' => 'عنوان',
             ))
             ->add('link', 'column', array(
-                'title' => 'Link',
-            ))
-            ->add('parent.id', 'column', array(
-                'title' => 'Parent Id',
-            ))
-            ->add('parent.weight', 'column', array(
-                'title' => 'Parent Weight',
-            ))
-            ->add('parent.order', 'column', array(
-                'title' => 'Parent Order',
+                'title' => 'لینک منو',
             ))
             ->add('parent.title', 'column', array(
-                'title' => 'Parent Title',
-            ))
-            ->add('parent.link', 'column', array(
-                'title' => 'Parent Link',
+                'title' => 'عنوان منوی بالادستی',
             ))
             ->add(null, 'action', array(
-                'title' => $this->translator->trans('datatables.actions.title'),
+                'title' => $this->translator->trans('label.actions', array(), 'labels'),
+                'width' => '80px',
                 'actions' => array(
                     array(
-                        'route' => 'menu_show',
+                        'route' => 'backend_menu_edit',
                         'route_parameters' => array(
                             'id' => 'id'
                         ),
-                        'label' => $this->translator->trans('datatables.actions.show'),
-                        'icon' => 'glyphicon glyphicon-eye-open',
+                        'icon' => 'fa fa-pencil',
                         'attributes' => array(
                             'rel' => 'tooltip',
-                            'title' => $this->translator->trans('datatables.actions.show'),
-                            'class' => 'btn btn-primary btn-xs',
+                            'title' => "ویرایش",
+                            'class' => 'btn btn-xs purple',
                             'role' => 'button'
                         ),
                     ),
                     array(
-                        'route' => 'menu_edit',
+                        'route' => 'backend_menu_delete',
                         'route_parameters' => array(
                             'id' => 'id'
                         ),
-                        'label' => $this->translator->trans('datatables.actions.edit'),
-                        'icon' => 'glyphicon glyphicon-edit',
+                        'icon' => 'fa fa-trash',
                         'attributes' => array(
                             'rel' => 'tooltip',
-                            'title' => $this->translator->trans('datatables.actions.edit'),
-                            'class' => 'btn btn-primary btn-xs',
+                            'title' => 'حذف',
+                            'class' => 'btn btn-xs blue',
                             'role' => 'button'
                         ),
-                    )
+                    ),
                 )
-            ))
-        ;
+            ));
     }
 
     /**
