@@ -65,6 +65,18 @@ class ContactDatatable extends AbstractDatatableView
             ->add('id', 'column', array(
                 'title' => 'Id',
             ))
+            ->add('fullname', 'column', array(
+                'title' => 'نام',
+            ))
+            ->add('email', 'column', array(
+                'title' => 'ایمیل',
+            ))
+            ->add('telephone', 'column', array(
+                'title' => 'تلفن',
+            ))
+            ->add('comment', 'column', array(
+                'title' => 'متن',
+            ))
         ;
     }
 
